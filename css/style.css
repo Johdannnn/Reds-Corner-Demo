@@ -243,3 +243,19 @@ footer {
     font-size: 34px;
   }
 }
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.about-images img {
+  width: 380px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+}
