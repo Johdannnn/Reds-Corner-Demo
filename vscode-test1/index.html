@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Red's Corner | Indianapolis</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #111;
+        color: white;
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(10, 10, 10, 0.95);
+        border-bottom: 1px solid #333;
+        z-index: 1000;
+      }
+
+      .logo {
+        color: #d62828;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 14px;
+      }
+
+      nav a:hover {
+        color: #e63946;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px 20px;
+
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
+          url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80");
+
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-content {
+        max-width: 800px;
+      }
+
+      .hero h1 {
+        font-size: clamp(50px, 10vw, 110px);
+        color: #e63946;
+        text-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
+        margin-bottom: 10px;
+      }
+
+      .hero h2 {
+        font-size: 22px;
+        font-weight: normal;
+        margin-bottom: 25px;
+        color: #ddd;
+      }
+
+      .rating {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .button {
+        display: inline-block;
+        background: #d62828;
+        color: white;
+        padding: 15px 28px;
+        margin: 8px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .button:hover {
+        background: #ff4d4d;
+        transform: translateY(-3px);
+      }
+
+      .button-outline {
+        background: transparent;
+        border: 2px solid #d62828;
+      }
+
+      /* Sections */
+      section {
+        padding: 90px 10%;
+      }
+
+      .section-title {
+        text-align: center;
+        color: #e63946;
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      .section-description {
+        text-align: center;
+        max-width: 700px;
+        margin: auto;
+        color: #bbb;
+        line-height: 1.7;
+      }
+
+      /* Features */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        margin-top: 50px;
+      }
+
+      .card {
+        background: #1b1b1b;
+        padding: 35px 25px;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid #333;
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        border-color: #d62828;
+      }
+
+      .card .icon {
+        font-size: 45px;
+        margin-bottom: 15px;
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      .card p {
+        color: #aaa;
+        line-height: 1.6;
+      }
+
+      /* Info Section */
+      .info {
+        background: #181818;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .info-box {
+        background: #222;
+        padding: 30px;
+        border-left: 4px solid #d62828;
+      }
+
+      .info-box h3 {
+        color: #e63946;
+        margin-bottom: 15px;
+      }
+
+      .info-box p {
+        color: #ccc;
+        line-height: 1.7;
+      }
+
+      .info-box a {
+        color: white;
+      }
+
+      /* Call To Action */
+      .cta {
+        text-align: center;
+        background: linear-gradient(
+          rgba(120, 0, 0, 0.85),
+          rgba(20, 0, 0, 0.95)
+        );
+      }
+
+      .cta h2 {
+        font-size: 45px;
+        margin-bottom: 15px;
+      }
+
+      .cta p {
+        color: #eee;
+        margin-bottom: 25px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        background: #0a0a0a;
+        color: #777;
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        nav {
+          padding: 15px 5%;
+        }
+
+        nav .links {
+          display: none;
+        }
+
+        section {
+          padding: 70px 7%;
+        }
+
+        .section-title {
+          font-size: 32px;
+        }
+
+        .cta h2 {
+          font-size: 34px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+
+    <nav>
+      <div class="logo">RED'S CORNER</div>
+
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#features">What's Here</a>
+        <a href="#visit">Visit</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>RED'S CORNER</h1>
+
+        <h2>Your Neighborhood Watering Hole</h2>
+
+        <div class="rating">⭐ 4.5 / 5 &nbsp; | &nbsp; 122 Google Reviews</div>
+
+        <a class="button" href="tel:+13175549239"> 📞 Call Now </a>
+
+        <a class="button button-outline" href="#visit"> 📍 Get Directions </a>
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section id="about">
+      <h2 class="section-title">Welcome to Red's Corner</h2>
+
+      <p class="section-description">
+        A neighborhood spot where you can grab a drink, catch the game, shoot
+        some pool, sing karaoke, and relax with friends.
+      </p>
+    </section>
+
+    <!-- Features -->
+
+    <section id="features" class="info">
+      <h2 class="section-title">What's Happening</h2>
+
+      <div class="features">
+        <div class="card">
+          <div class="icon">🍻</div>
+          <h3>Drinks</h3>
+          <p>Kick back and enjoy your favorite drinks with friends.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎤</div>
+          <h3>Karaoke</h3>
+          <p>Grab the mic and show everyone what you've got.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎱</div>
+          <h3>Pool</h3>
+          <p>Challenge your friends to a game.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📺</div>
+          <h3>Sports</h3>
+          <p>Catch the game and cheer with the crowd.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌙</div>
+          <h3>Patio</h3>
+          <p>Relax outside and enjoy the atmosphere.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+
+    <section id="visit">
+      <h2 class="section-title">Come See Us</h2>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>📍 Location</h3>
+
+          <p>
+            2137 S Meridian St<br />
+            Indianapolis, IN 46225
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>📞 Phone</h3>
+
+          <p>
+            <a href="tel:+13175549239"> (317) 554-9239 </a>
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>💲 Price Range</h3>
+
+          <p>$10–20 per person</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <a
+          class="button"
+          href="https://www.google.com/maps/search/?api=1&query=2137+S+Meridian+St+Indianapolis+IN+46225"
+          target="_blank"
+        >
+          📍 Open in Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+      <h2>Good Drinks. Good People. Good Times.</h2>
+
+      <p>
+        Stop by Red's Corner and see what the neighborhood is talking about.
+      </p>
+
+      <a
+        class="button"
+        href="https://www.google.com/search?q=reds+corner+indianapolis+reviews"
+        target="_blank"
+      >
+        ⭐ Leave a Review
+      </a>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <p>© 2026 Red's Corner · Indianapolis, Indiana</p>
+    </footer>
+  </body>
+</html>
