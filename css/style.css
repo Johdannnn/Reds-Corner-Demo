@@ -247,15 +247,14 @@ footer {
 .about-images {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+  gap: 15px;
+  margin: 40px auto 0;
+  max-width: 1200px;
 }
 
 .about-images img {
-  width: 380px;
+  width: calc((100% - 30px) / 3);
   height: 300px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 12px;
 }
