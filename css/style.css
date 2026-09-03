@@ -56,7 +56,7 @@ nav a:hover {
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
-    url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80");
+    url("../images/photos/bar-photo.webp");
 
   background-size: cover;
   background-position: center;
@@ -240,13 +240,4 @@ footer {
   .cta h2 {
     font-size: 34px;
   }
-}
-.about-image {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  height: 450px;
-  object-fit: cover;
-  margin: 40px auto 0;
-  border-radius: 16px;
 }
