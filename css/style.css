@@ -112,6 +112,10 @@ nav a:hover {
 /* Sections */
 section {
   padding: 90px 10%;
+  #about {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 .section-title {
@@ -253,10 +257,10 @@ footer {
 
 .about-images {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 40px auto 0;
 }
 
@@ -266,4 +270,5 @@ footer {
   object-fit: cover;
   border-radius: 12px;
   display: block;
+  min-width: 0;
 }
