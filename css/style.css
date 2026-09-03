@@ -58,8 +58,10 @@ nav a:hover {
     linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
     url("../images/photos/bar-photo.webp");
 
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: #111;
 }
 
 .hero-content {
